@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  miso-deployment:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-05-11T09:34:25.844675976Z"
+    description: A Helm chart for Kubernetes Deployment. This should not be used with
+      default values. Always custom value should be provided. Please follow README.
+    digest: 5dd712ea3409ddc0760a3cee6fe5c6e14654049ed175eafa1cfa072e85baab9b
+    name: miso-deployment
+    type: application
+    urls:
+    - https://github.com/getmiso/helm-charts/releases/download/miso-deployment-0.1.1/miso-deployment-0.1.1.tgz
+    version: 0.1.1
+generated: "2023-05-11T09:34:25.844682076Z"
