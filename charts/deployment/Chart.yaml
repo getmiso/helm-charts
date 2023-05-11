@@ -1,6 +1,6 @@
 apiVersion: v2
 name: miso-deployment
-description: A Helm chart for Kubernetes Deployment. This should not be used with default values. Always custom value should be provided.
+description: A Helm chart for Kubernetes Deployment. This should not be used with default values. Always custom value should be provided. Please follow README.
 
 # A chart can be either an 'application' or a 'library' chart.
 #
