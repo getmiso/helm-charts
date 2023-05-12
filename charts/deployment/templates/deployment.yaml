@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "miso-deployment.fullname" . }}
+  name: {{ include "deployment.fullname" . }}
   labels:
-    {{- include "miso-deployment.labels" . | nindent 4 }}
+    {{- include "deployment.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "miso-deployment.selectorLabels" . | nindent 6 }}
+      {{- include "deployment.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,19 +18,19 @@ spec:
       {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "miso-deployment.selectorLabels" . | nindent 8 }}
+        {{- include "deployment.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       {{if .Values.serviceAccount.create}}
-      serviceAccountName: {{ include "miso-deployment.serviceAccountName" . }}
+      serviceAccountName: {{ include "deployment.serviceAccountName" . }}
       {{- end }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ include "miso-deployment.fullname" . }}
+        - name: {{ include "deployment.fullname" . }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"

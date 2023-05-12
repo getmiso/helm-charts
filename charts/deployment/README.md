@@ -54,7 +54,7 @@ env:
 ```
 Using above values you can apply it using helm:
 ```bash
-helm install miso-local miso-charts/miso-deployment --namespace front -f values.yaml
+helm install miso-local miso-charts/deployment --namespace front -f values.yaml
 ```
 
 #### Automatic deployment
