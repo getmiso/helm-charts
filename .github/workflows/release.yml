@@ -4,10 +4,9 @@ name: Release Helm Charts
 concurrency: release-helm
 
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
+
 
 jobs:
   release:
