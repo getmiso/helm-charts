@@ -3,24 +3,24 @@ entries:
   miso-deployment:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-05-11T09:41:00.813472231Z"
+    created: "2023-05-12T02:14:12.829636638Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
-    digest: fb978c896fae41e708216504683a141770cc86199d1abb9d76ae9c692538b59d
+    digest: db9a63b712785f263c1cbc059e82ac3cd5e317ab8a3a827ce55e9da099475ff0
     name: miso-deployment
     type: application
     urls:
-    - https://github.com/getmiso/helm-charts/releases/download/miso-deployment-0.1.2/miso-deployment-0.1.2.tgz
-    version: 0.1.2
+    - https://raw.githubusercontent.com/CodeWithStu/helm-private-demo/gh-pages/miso-deployment-0.1.5.tgz
+    version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-05-11T09:34:25.844675976Z"
+    created: "2023-05-12T02:14:12.829063787Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
-    digest: 5dd712ea3409ddc0760a3cee6fe5c6e14654049ed175eafa1cfa072e85baab9b
+    digest: 706516979a04b5a2bae80f41f55b2009dc385855d280109f6a1287a6535ea24b
     name: miso-deployment
     type: application
     urls:
-    - https://github.com/getmiso/helm-charts/releases/download/miso-deployment-0.1.1/miso-deployment-0.1.1.tgz
-    version: 0.1.1
-generated: "2023-05-11T09:41:00.813478631Z"
+    - https://raw.githubusercontent.com/CodeWithStu/helm-private-demo/gh-pages/miso-deployment-0.1.3.tgz
+    version: 0.1.3
+generated: "2023-05-12T02:14:12.828250914Z"
