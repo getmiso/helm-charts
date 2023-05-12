@@ -13,6 +13,5 @@ All the charts are stored in `charts` folder. Currently we have following charts
 
 - [deployment](https://github.com/getmiso/helm-charts/tree/main/charts/deployment)
 
-
 #### CI/CD
 There is a [relese-based deployment pipeline](https://github.com/getmiso/helm-charts/blob/main/.github/workflows/release.yml) that publishes each helm chart at once.
