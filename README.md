@@ -4,7 +4,7 @@ This is the repository that we keep and host all the helm-charts for miso micros
 
 #### Branches
 
-1. **main** - branch to keep and deploy charts. This branch has pipeline that we
+1. **main** - branch to keep and deploy charts.
 2. **gh-pages** - branch to keep helm-generated chart files. *DO NOT CHANGE ANYTHING IN THIS BRANCH.*
 
 #### Charts
