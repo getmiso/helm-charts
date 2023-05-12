@@ -1,6 +1,10 @@
-name: Release Charts
+name: Release Helm Charts
+
+# Do not change this
+concurrency: release-helm
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -12,21 +16,34 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
+          path: "src"
           fetch-depth: 0
-
-      - name: Configure Git
-        run: |
-          git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: "dest"
+          ref: "gh-pages"
+          fetch-depth: 0
 
       - name: Install Helm
         uses: azure/setup-helm@v1
-        with:
-          version: v3.4.0
 
-      - name: Run chart-releaser
-        uses: stecky/yet-another-chart-releaser-action@v1
-        with:
-          packages_with_index: true
-        env:
-          YACR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Package Helm Charts
+        shell: bash
+        run: |
+          find src/charts/ -type f -name 'Chart.yaml' | sed -r 's|/[^/]+$||' | sort | uniq | xargs -L 1 helm dep up
+          for d in src/charts/*/ ; do
+              echo "$d"
+              helm package "$d" -u -d dest
+          done
+      - name: Push New Files
+        shell: bash
+        working-directory: dest
+        run: |
+          helm repo index . --url https://raw.githubusercontent.com/CodeWithStu/helm-private-demo/gh-pages/
+          git config user.name "Helm Updater"
+          git config user.email "actions@users.noreply.github.com"
+          git add $(git ls-files -o --exclude-standard)
+          git add index.yaml
+          git commit -m "Updated from ref: $GITHUB_SHA"
+          git push
