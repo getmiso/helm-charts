@@ -24,4 +24,4 @@ jobs:
         with:
           packages_with_index: true
         env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          YACR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
