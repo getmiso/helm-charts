@@ -3,24 +3,35 @@ entries:
   miso-deployment:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-05-12T02:14:12.829636638Z"
+    created: "2023-05-12T02:17:02.840872424Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
-    digest: db9a63b712785f263c1cbc059e82ac3cd5e317ab8a3a827ce55e9da099475ff0
+    digest: b7536a4bee39b5ea71e0066ac105bbe70d598d1a14c9080fa2ff500ed45658ac
     name: miso-deployment
     type: application
     urls:
-    - https://raw.githubusercontent.com/CodeWithStu/helm-private-demo/gh-pages/miso-deployment-0.1.5.tgz
+    - https://raw.githubusercontent.com/getmiso/helm-charts/gh-pages/miso-deployment-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-05-12T02:17:02.839510805Z"
+    description: A Helm chart for Kubernetes Deployment. This should not be used with
+      default values. Always custom value should be provided. Please follow README.
+    digest: bf0399359ef5825b0e70229edca14997424df8aa4a92f74ac38fb0d22cb69a1e
+    name: miso-deployment
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/getmiso/helm-charts/gh-pages/miso-deployment-0.1.5.tgz
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-05-12T02:14:12.829063787Z"
+    created: "2023-05-12T02:17:02.838650693Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: 706516979a04b5a2bae80f41f55b2009dc385855d280109f6a1287a6535ea24b
     name: miso-deployment
     type: application
     urls:
-    - https://raw.githubusercontent.com/CodeWithStu/helm-private-demo/gh-pages/miso-deployment-0.1.3.tgz
+    - https://raw.githubusercontent.com/getmiso/helm-charts/gh-pages/miso-deployment-0.1.3.tgz
     version: 0.1.3
-generated: "2023-05-12T02:14:12.828250914Z"
+generated: "2023-05-12T02:17:02.837824981Z"
