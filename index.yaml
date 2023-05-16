@@ -3,7 +3,7 @@ entries:
   deployment:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-05-16T01:45:58.389834546Z"
+    created: "2023-05-16T01:47:26.217157826Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: 8e14344c1cde5ee70e3ce904470ca610c5035fe320f21b9552abc5d87134215a
@@ -12,4 +12,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/getmiso/helm-charts/gh-pages/deployment-0.1.0.tgz
     version: 0.1.0
-generated: "2023-05-16T01:45:58.389195243Z"
+generated: "2023-05-16T01:47:26.216354355Z"
