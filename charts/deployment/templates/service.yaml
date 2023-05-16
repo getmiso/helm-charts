@@ -20,5 +20,5 @@ spec:
   {{ toYaml .Values.service.additionalPorts | indent 4 }}
   {{- end }}
   selector:
-    {{- include "deployment.selectorLabels" . | nindent 4 }}
+    app: {{ include "deployment.fullname" . }}
 {{- end }}

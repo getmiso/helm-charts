@@ -10,7 +10,7 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      {{- include "deployment.selectorLabels" . | nindent 6 }}
+      app: {{ include "deployment.fullname" . }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
