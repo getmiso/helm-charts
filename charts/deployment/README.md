@@ -12,45 +12,45 @@ This chart is created to help deploy `deployment type` microservices into our ek
 The following tables lists the configurable parameters of the chart and their default values.
 | Parameter | Description | Default Value |
 |:---------------------------------------------:|:--------------------------------------------------------------------------------:|:-------------:|
-| replicaCount | Number of replicas deployment have | 1 |
-| image.repository | AWS ECR Image repository of deplooyment | hello-world |
-| image.pullPolicy | Pull policy of deployment docker image | Always |
-| image.tag | Tag of the deployment docker image | latest |
-| imagePullSecrets | Image pull secrets list to use when pulling docker image | [] |
-| nameOverride | Name of the deployment | "" |
-| fullnameOverride | Name to override all the resources in the template | "" |
-| serviceAccount.create | Service account to use in the deployment | false |
-| serviceAccount.annotations | Service account annotations | {} |
-| serviceAccount.name | Name of the service account | "" |
-| podAnnotations | Deployment pod annotations | {} |
-| podSecurityContext | Security context of deployment pods | {} |
-| service.enabled | Enable flag of service to expose deployment | true |
-| service.annotations | Annotations to add to service | {} |
-| service.type | Service resource type: NodePort, ClusterIp | NodePort |
-| service.name | Name of the service | "" |
-| service.port | Port of the service | 80 |
-| service.targetPort | Target port of the service | 80 |
-| service.additionalPorts | Additional service ports list | [] |
-| resources.limits.cpu | CPU limit of the deployment | 200m |
-| resources.limit.memory | Memory limit of the deployment | 200Mi |
-| resources.request.cpu | CPU request of the deployment | 100m |
-| resources.request.memory | Memory request of the deployment | 100Mi |
-| autoscaling.enabled | Flag to enable HorizontalPodAutoscaling for deployment | false |
-| autoscaling.minReplicas | Minimum number of replica count of HorizontalPodAutoscaling | 1 |
-| autoscaling.maxReplicas | Maximum number of replica count of HorizontalPodAutoscaling | 10 |
-| autoscaling.targetCPUUtilizationPercentage | Target CPU utlization threshhold, this indicates when to autoscale down or up | 80 |
-| autoscaling.targetMemoryUtilizationPercentage | Target Memory utlization threshhold, this indicates when to autoscale down or up | 80 |
-| livenessProbe.enabled | Flag to enable liveness probe of deployment | false |
-| livenessProbe.path | Http path to expose for liveness probe | / |
-| livenessProbe.port | Http port to expose for liveness probe | 80 |
-| readinessProbe.enabled | Flag to enable readiness probe of deployment | false |
-| readinessProbe.path | Http path to expose for readiness probe | / |
-| readinessProbe.port | Http port to expose for readiness probe | 80 |
-| nodeSelector | Node selector configuration for deployment | {} |
-| tolerations | Tolerations configuration list for deployment | [] |
-| affinity | Affinity configuration for deployment | {} |
-| terminationGracePeriod | Deployment pod termination grace period in seconds | 30 |
-| env.ENV_VARIABLE_NAME | Environament variable for deployment. You can define its name and value yourself | ENV_VARIABLE_VALUE |
+| `replicaCount` | Number of replicas deployment have | `1` |
+| `image.repository` | AWS ECR Image repository of deplooyment | `hello-world` |
+| `image.pullPolicy` | Pull policy of deployment docker image | `Always` |
+| `image.tag` | Tag of the deployment docker image | `latest` |
+| `imagePullSecrets` | Image pull secrets list to use when pulling docker image | `[]` |
+| `nameOverride` | Name of the deployment | `""` |
+| `fullnameOverride` | Name to override all the resources in the template | `""` |
+| `serviceAccount.create` | Service account to use in the deployment | `false` |
+| `serviceAccount.annotations` | Service account annotations | `{}` |
+| `serviceAccount.name` | Name of the service account | `""` |
+| `podAnnotations` | Deployment pod annotations | `{}` |
+| `podSecurityContext` | Security context of deployment pods | `{}` |
+| `service.enabled` | Enable flag of service to expose deployment | `true` |
+| `service.annotations` | Annotations to add to service | `{}` |
+| `service.type` | Service resource type: NodePort, ClusterIp | `NodePort` |
+| `service.name` | Name of the service | `""` |
+| `service.port` | Port of the service | `80` |
+| `service.targetPort` | Target port of the service | `80` |
+| `service.additionalPorts` | Additional service ports list | `[]` |
+| `resources.limits.cpu` | CPU limit of the deployment | `200m` |
+| `resources.limit.memory` | Memory limit of the deployment | `200Mi` |
+| `resources.request.cpu` | CPU request of the deployment | `100m` |
+| `resources.request.memory` | Memory request of the deployment | `100Mi` |
+| `autoscaling.enabled` | Flag to enable HorizontalPodAutoscaling for deployment | `false` |
+| `autoscaling.minReplicas` | Minimum number of replica count of HorizontalPodAutoscaling | `1` |
+| `autoscaling.maxReplicas` | Maximum number of replica count of HorizontalPodAutoscaling | `10` |
+| `autoscaling.targetCPUUtilizationPercentage` | Target CPU utlization threshhold, this indicates when to autoscale down or up | `80` |
+| `autoscaling.targetMemoryUtilizationPercentage` | Target Memory utlization threshhold, this indicates when to autoscale down or up | `80` |
+| `livenessProbe.enabled` | Flag to enable liveness probe of deployment | `false` |
+| `livenessProbe.path` | Http path to expose for liveness probe | `/` |
+| `livenessProbe.port` | Http port to expose for liveness probe | `80` |
+| `readinessProbe.enabled` | Flag to enable readiness probe of deployment | `false` |
+| `readinessProbe.path` | Http path to expose for readiness probe | `/` |
+| `readinessProbe.port` | Http port to expose for readiness probe | `80` |
+| `nodeSelector` | Node selector configuration for deployment | `{}` |
+| `tolerations` | Tolerations configuration list for deployment | `[]` |
+| `affinity` | Affinity configuration for deployment | `{}` |
+| `terminationGracePeriod` | Deployment pod termination grace period in seconds | `30` |
+| `env.ENV_VARIABLE_NAME` | Environament variable for deployment. You can define its name and value yourself | `ENV_VARIABLE_VALUE` |
 
 #### How to deploy a particular microservice manually using this chart:
 
