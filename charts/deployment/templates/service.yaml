@@ -28,7 +28,7 @@ kind: Service
 metadata:
   name: {{ .name }}
   labels:
-    {{- include "deployment.labels" . | nindent 4 }}
+    {{- include "deployment.labels" $ | nindent 4 }}
   annotations:
     {{- with .Values.service.annotations }}
     {{ toYaml . | indent 4 }}
@@ -36,7 +36,7 @@ metadata:
 spec:
   type: {{ .type }}
   selector:
-    app: {{ include "deployment.fullname" . }}
+    app: {{ include "deployment.fullname" $ }}
   ports:
     {{- range .ports }}
     - protocol: TCP
