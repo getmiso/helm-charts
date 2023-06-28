@@ -22,26 +22,27 @@ spec:
   selector:
     app: {{ include "deployment.fullname" . }}
 {{- end }}
-{{- range .Values.services }}
+{{- range $service := .Values.services }}
+---
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .name }}
+  name: {{ $service.name | quote }}
   labels:
     {{- include "deployment.labels" $ | nindent 4 }}
   annotations:
-    {{- range .annotations }}
-    {{ .name }}: {{ .value }}
+    {{- range $annotation := $service.annotations }}
+    {{ $annotation.name }}: {{ $annotation.value }}
     {{- end }}
 spec:
-  type: {{ .type }}
+  type: {{ $service.type }}
   selector:
     app: {{ include "deployment.fullname" $ }}
   ports:
-    {{- range .ports }}
+    {{- range $port := $service.ports }}
     - protocol: TCP
-      port: {{ .port }}
-      name: {{ .name }}
-      targetPort: {{ .targetPort }}
+      port: {{ $port.port }}
+      name: {{ $port.name | quote }}
+      targetPort: {{ $port.targetPort }}
     {{- end }}
 {{- end }}

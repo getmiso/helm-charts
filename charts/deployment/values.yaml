@@ -52,6 +52,9 @@ services: []
 # services:
 #   - name: service_name1
 #     type: NodePort
+#     annotations:
+#       - name: annot
+#         value: val
 #     ports:
 #      - name: port_name1
 #        port: 80
