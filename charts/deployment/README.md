@@ -31,6 +31,7 @@ The following tables lists the configurable parameters of the chart and their de
 | `service.port` | Port of the service | `80` |
 | `service.targetPort` | Target port of the service | `80` |
 | `service.additionalPorts` | Additional service ports list | `[]` |
+| `services` | Additional services list | `[]` |
 | `resources.limits.cpu` | CPU limit of the deployment | `200m` |
 | `resources.limit.memory` | Memory limit of the deployment | `200Mi` |
 | `resources.request.cpu` | CPU request of the deployment | `100m` |

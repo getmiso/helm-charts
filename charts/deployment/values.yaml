@@ -47,6 +47,22 @@ service:
   name: default-service
   additionalPorts: []
 
+services: []
+# services can be defined as follows in custom values file:
+# services:
+#   - name: service_name1
+#     type: NodePort
+#     ports:
+#      - name: port_name1
+#        port: 80
+#        targetPort: 80
+#   - name: service_name2
+#     type: NodePort
+#     ports:
+#      - name: port_name1
+#        port: 80
+#        targetPort: 80
+
 resources:
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little

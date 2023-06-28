@@ -22,3 +22,26 @@ spec:
   selector:
     app: {{ include "deployment.fullname" . }}
 {{- end }}
+{{- range .Values.services }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .name }}
+  labels:
+    {{- include "deployment.labels" . | nindent 4 }}
+  annotations:
+    {{- with .Values.service.annotations }}
+    {{ toYaml . | indent 4 }}
+    {{- end }}
+spec:
+  type: {{ .type }}
+  selector:
+    app: {{ include "deployment.fullname" . }}
+  ports:
+    {{- range .ports }}
+    - protocol: TCP
+      port: {{ .port }}
+      name: {{ .name }}
+      targetPort: {{ .targetPort }}
+    {{- end }}
+{{- end }}
