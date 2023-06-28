@@ -3,10 +3,21 @@ entries:
   deployment:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-06-28T04:25:07.872014911Z"
+    created: "2023-06-28T04:29:19.697978317Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
-    digest: 5964d92d8314043751c99b47dbc92f31f774ef24a3f2752d6453393fa9ea05a4
+    digest: f42c68321a1fb3394b0eb4b20baa288104592754872d1fe2cd01a934f3607eca
+    name: deployment
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/getmiso/helm-charts/gh-pages/deployment-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-06-28T04:29:19.697467715Z"
+    description: A Helm chart for Kubernetes Deployment. This should not be used with
+      default values. Always custom value should be provided. Please follow README.
+    digest: 0bb1a2159fc531240b91d60b5105171acbe6be7ee91e3be1140f87dad0fa35eb
     name: deployment
     type: application
     urls:
@@ -14,7 +25,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-06-28T04:25:07.871460912Z"
+    created: "2023-06-28T04:29:19.696959213Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: b2597204f0894758be786dfab9a35601d0ad3f57442009ac0a1de2242f0d9e07
@@ -23,4 +34,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/getmiso/helm-charts/gh-pages/deployment-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-28T04:25:07.870787714Z"
+generated: "2023-06-28T04:29:19.696222511Z"
