@@ -1,0 +1,103 @@
+exports:
+  defaults:
+    nameOverride: ""
+    fullnameOverride: ""
+
+    # default deployment values
+    replicaCount: 1
+    image:
+      repository: hello-world
+      pullPolicy: Always
+      tag: "latest"
+    podAnnotations: {}
+    podSecurityContext: {}
+    securityContext: {}
+    resources:
+      # We usually recommend not to specify default resources and to leave this as a conscious
+      # choice for the user. This also increases chances charts run on environments with little
+      # resources, such as Minikube. If you do want to specify resources, uncomment the following
+      # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+      limits:
+        cpu: 200m
+        memory: 200Mi
+      requests:
+        cpu: 100m
+        memory: 128Mi
+    livenessProbe:
+      enabled: false
+      path: /
+      port: 80
+    readinessProbe:
+      enabled: false
+      path: /
+      port: 80
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
+    terminationGracePeriod: 120
+    restartPolicy: Always
+    imagePullSecrets: []
+    env:
+      APP: deployment
+
+    serviceAccount:
+      create: false
+      # Annotations to add to the service account
+      annotations: {}
+      # The name of the service account to use.
+      # If not set and create is true, a name is generated using the fullname template
+      name: ""
+
+    service:
+      annotations: {}
+      type: NodePort
+      port: 80
+      targetPort: 80
+      portName: default-service
+      additionalPorts: []
+
+    services: [] # List of services to create
+    # services can be defined as follows in custom values file:
+    # services:
+    #   - name: service_name1
+    #     type: NodePort
+    #     annotations:
+    #       - name: annot
+    #         value: val
+    #     ports:
+    #      - name: port_name1
+    #        port: 80
+    #        targetPort: 80
+
+    autoscaling:
+      enabled: false
+      minReplicas: 1
+      maxReplicas: 10
+      targetCPUUtilizationPercentage: 80
+      targetMemoryUtilizationPercentage: 80
+
+    externalSecrets: []
+    # externalsecrets can be defined as follows in custom values file:
+    # externalSecrets:
+    #   - name: external-secret1
+    #     data:
+    #       - remoteRefKey: remoterefkey1
+    #         secretKey: secretkey1
+    #       - remoteRefKey: remoterefkey2
+    #         secretKey: secretkey2
+    #     secretStoreRef: eso-ps
+    #     target: target-name
+
+    volumeMounts: []
+    # volumeMounts can be defined as follows in custom values file:
+    # volumeMounts:
+    #   - name: name1
+    #     mountPath: mount_path_1
+    #   - name: name2
+    #     mountPath: mount_path_2
+    volumeClaimTemplates: []
+    # volumeClaimTemplates can be defined as follows in custom values file:
+    # volumeClaimTemplates:
+    #   - name: temp1
+    #     accessModes: ["ReadWriteOnce"]
+    #     requestedStorage: 15Gi

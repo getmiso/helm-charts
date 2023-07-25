@@ -12,6 +12,7 @@ This is the repository that we keep and host all the helm-charts for miso micros
 All the charts are stored in `charts` folder. Currently we have following charts in our disposal:
 
 - [deployment](https://github.com/getmiso/helm-charts/tree/main/charts/deployment)
+- [misolib](https://github.com/getmiso/helm-charts/tree/main/charts/misolib)
 
 #### CI/CD
 There is a [relese-based deployment pipeline](https://github.com/getmiso/helm-charts/blob/main/.github/workflows/release.yml) that publishes each helm chart at once.

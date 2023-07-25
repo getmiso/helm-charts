@@ -1,0 +1,4 @@
+fullnameOverride: example-deployment
+image:
+  repository: nginx
+  tag: latest
