@@ -1,0 +1,17 @@
+externalSecrets:
+  - name: external-secret1
+    data:
+      - remoteRefKey: /config/ds/staging/INTERNAL_TRIGGERS_PORT
+        secretKey: INTERNAL_TRIGGERS_PORT
+      - remoteRefKey: /config/ds/staging/MANAGER
+        secretKey: MANAGER
+    secretStoreRef: eso-ps
+    target: example-secret1
+  - name: external-secret2
+    data:
+      - remoteRefKey: rds/miso-staging/postgres
+        secretKey: MISO_CRED
+      - remoteRefKey: rds/directory-staging/postgres
+        secretKey: DIRECTORY_CREDS
+    secretStoreRef: eso-sm
+    target: example-secret2

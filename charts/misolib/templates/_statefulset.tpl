@@ -1,6 +1,6 @@
-{{- define "misolib.deployment" -}}
+{{- define "misolib.statefulset" -}}
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: {{ include "misolib.fullname" . }}
   labels:
@@ -9,6 +9,7 @@ spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
+  serviceName: {{ include "misolib.fullname" . }}
   selector:
     matchLabels:
       app: {{ include "misolib.fullname" . }}
@@ -55,6 +56,13 @@ spec:
           {{- end }}
           {{- end }}
           {{- end }}
+          {{- if ne (len .Values.volumeMounts) 0}}
+          volumeMounts:
+          {{- range $volumeMount := .Values.volumeMounts }}
+            - name: {{ $volumeMount.name }}
+              mountPath: {{ $volumeMount.mountPath }}
+          {{- end }}
+          {{- end }}
           env:
           {{- range $key, $val := .Values.env }}
             - name: {{ $key }}
@@ -88,4 +96,16 @@ spec:
       {{- end }}
       restartPolicy: {{ .Values.restartPolicy }}
       terminationGracePeriodSeconds: {{ .Values.terminationGracePeriod }}
+  {{- if ne (len .Values.volumeClaimTemplates) 0}}
+  volumeClaimTemplates:
+  {{- range $volumeClaimTemplate := .Values.volumeClaimTemplates }}
+    - metadata:
+        name: {{ $volumeClaimTemplate.name }}
+      spec:
+        accessModes: {{ $volumeClaimTemplate.accessModes }}
+        resources:
+          requests:
+            storage: {{ $volumeClaimTemplate.requestedStorage }}
+  {{- end }}
+  {{- end }}
 {{- end -}}

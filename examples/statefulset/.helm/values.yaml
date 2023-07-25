@@ -1,0 +1,13 @@
+fullnameOverride: example-statefulset
+image:
+  repository: nginx
+  tag: latest
+volumeMounts:
+  - name: name1
+    mountPath: mount_path_1
+  - name: name2
+    mountPath: mount_path_2
+volumeClaimTemplates:
+  - name: temp1
+    accessModes: ["ReadWriteOnce"]
+    requestedStorage: 15Gi
