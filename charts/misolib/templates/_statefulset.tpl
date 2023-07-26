@@ -51,9 +51,7 @@ spec:
           {{- $uniquePortNames := dict}}
           {{- range $service := .Values.services }}
           {{- range $port := $service.ports}}
-          {{- if hasKey $uniquePortNames $port.name}}
-          {{- printf "Duplicate port %s" $port.name}}
-          {{- else}}
+          {{- if not (hasKey $uniquePortNames $port.name)}}
           {{- $_ := set $uniquePortNames $port.name $port.name}}
             - name: {{ $port.name }}
               containerPort: {{ $port.targetPort }}
