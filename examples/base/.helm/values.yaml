@@ -3,18 +3,23 @@ image:
   repository: nginx
   tag: latest
 services:
-  - name: service_name1
+  - name: service-name1
     type: NodePort
     annotations:
       - name: annot
         value: val
     ports:
-     - name: port_name1
-       port: 8080
-       targetPort: 8080
-     - name: port_name2
-       port: 8090
-       targetPort: 8090
+      - name: port-name1
+        port: 8080
+        targetPort: 8080
+      - name: port-name2
+        port: 8090
+        targetPort: 8090
+  - name: service-name2
+    ports:
+      - name: port-name3
+        port: 8080
+        targetPort: 8080
 serviceAccount:
   create: true
 autoscaling:

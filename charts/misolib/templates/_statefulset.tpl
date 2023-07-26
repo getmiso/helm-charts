@@ -37,22 +37,28 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sleep", "90"]
           {{- if eq (len .Values.services) 0}}
           ports:
             - name: {{ .Values.service.name }}
               containerPort: {{ .Values.service.targetPort }}
               protocol: TCP
           {{- else }}
-          {{- range $service := .Values.services }}
-          lifecycle:
-            preStop:
-              exec:
-                command: ["/bin/sleep", "90"]
           ports:
-          {{- range $port := $service.ports }}
+          {{- $uniquePortNames := dict}}
+          {{- range $service := .Values.services }}
+          {{- range $port := $service.ports}}
+          {{- if hasKey $uniquePortNames $port.name}}
+          {{- printf "Duplicate port %s" $port.name}}
+          {{- else}}
+          {{- $_ := set $uniquePortNames $port.name $port.name}}
             - name: {{ $port.name }}
               containerPort: {{ $port.targetPort }}
               protocol: TCP
+          {{- end }}
           {{- end }}
           {{- end }}
           {{- end }}
