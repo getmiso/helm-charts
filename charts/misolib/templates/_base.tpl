@@ -1,7 +1,7 @@
 {{- define "misolib.base" -}}
 {{- include "misolib.deployment" . }}
 ---
-{{- if .Values.serviceAccount.create }}
+{{- if .Values.autoscaling.enabled }}
 {{- include "misolib.hpa" . }}
 {{- end}}
 ---
