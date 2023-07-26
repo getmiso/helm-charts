@@ -3,7 +3,7 @@ entries:
   deployment:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-26T04:27:12.631524047Z"
+    created: "2023-07-26T06:53:24.278573083Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: cf952c3fcdf52c82b08092fe0d8fa24ccdf37d9435a268a9a17203f6c37dff6a
@@ -14,7 +14,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-26T04:27:12.630852993Z"
+    created: "2023-07-26T06:53:24.277047121Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: 12b3eff4638a69fea1aedda9ac0651d72e584e1f1d1ef9b2ba0b053bd1f7920a
@@ -25,7 +25,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-26T04:27:12.630211342Z"
+    created: "2023-07-26T06:53:24.27628699Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: c78ea323790410eb5fa733db7e0b4b454fc0efc5b35291cc58d4d28763c858a5
@@ -36,7 +36,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-26T04:27:12.629541588Z"
+    created: "2023-07-26T06:53:24.271513097Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: f42c68321a1fb3394b0eb4b20baa288104592754872d1fe2cd01a934f3607eca
@@ -47,7 +47,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-26T04:27:12.628328291Z"
+    created: "2023-07-26T06:53:24.270959175Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: 0bb1a2159fc531240b91d60b5105171acbe6be7ee91e3be1140f87dad0fa35eb
@@ -58,7 +58,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-26T04:27:12.627403817Z"
+    created: "2023-07-26T06:53:24.270420853Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: b2597204f0894758be786dfab9a35601d0ad3f57442009ac0a1de2242f0d9e07
@@ -70,9 +70,9 @@ entries:
   misolib:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-26T04:27:12.633752025Z"
+    created: "2023-07-26T06:53:24.28047346Z"
     description: A library chart for deployment to Miso cluster.
-    digest: 6ae347cb574ce92e3951c9f350f610877a4785783ac99c22d96b37cc21512e43
+    digest: b15b84a69f8247b57c9e5328037eb8fb80eb7ae40e36753919d38e4dc355cc15
     name: misolib
     type: library
     urls:
@@ -80,7 +80,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-26T04:27:12.633026367Z"
+    created: "2023-07-26T06:53:24.279846534Z"
     description: A library chart for deployment to Miso cluster.
     digest: 63298a40c633933ca459426212b5722c00eaa2dba4f8af4e6841ea6f57f3840d
     name: misolib
@@ -90,7 +90,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-26T04:27:12.63231251Z"
+    created: "2023-07-26T06:53:24.279206809Z"
     description: A library chart for deployment to Miso cluster.
     digest: e1a17a9316be52bdd8b4cd263c4bd23e4911fbcaa67784ed02967648e2b470e1
     name: misolib
@@ -98,4 +98,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/getmiso/helm-charts/gh-pages/misolib-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-26T04:27:12.625290648Z"
+generated: "2023-07-26T06:53:24.269674023Z"
