@@ -43,7 +43,7 @@ spec:
                 command: ["/bin/sleep", "90"]
           {{- if eq (len .Values.services) 0}}
           ports:
-            - name: {{ .Values.service.name }}
+            - name: {{ .Values.service.portName }}
               containerPort: {{ .Values.service.targetPort }}
               protocol: TCP
           {{- else }}

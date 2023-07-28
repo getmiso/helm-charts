@@ -46,6 +46,6 @@ spec:
       targetPort: {{ $port.targetPort }}
     {{- end }}
 ---
-{{- end }} # end of range
-{{- end }} # end of if/else
-{{- end }} # end of defenition
+{{- end }}
+{{- end }}
+{{- end }}
