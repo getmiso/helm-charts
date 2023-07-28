@@ -18,11 +18,11 @@ exports:
       # resources, such as Minikube. If you do want to specify resources, uncomment the following
       # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
       limits:
-        cpu: 200m
-        memory: 200Mi
+        cpu: 300m
+        memory: 500Mi
       requests:
-        cpu: 100m
-        memory: 128Mi
+        cpu: 200m
+        memory: 250Mi
     livenessProbe:
       enabled: false
       path: /

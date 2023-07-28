@@ -3,4 +3,4 @@ appVersion: 1.0.0
 description: A library chart for deployment to Miso cluster.
 name: misolib
 type: library
-version: 0.1.4
+version: 0.1.5
