@@ -7,6 +7,8 @@ metadata:
     {{- include "misolib.labels" . | nindent 4 }}
   {{- with .Values.serviceAccount.annotations }}
   annotations:
-    {{- toYaml . | nindent 4 }}
+    {{- with .Values.service.annotations }}
+    {{ toYaml . | indent 4 }}
+    {{- end }}
   {{- end }}
 {{- end }}
