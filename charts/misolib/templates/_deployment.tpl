@@ -26,6 +26,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       {{if .Values.serviceAccount.create}}
+      serviceAccount: {{ include "misolib.serviceAccountName" . }}
       serviceAccountName: {{ include "misolib.serviceAccountName" . }}
       {{- end }}
       securityContext:

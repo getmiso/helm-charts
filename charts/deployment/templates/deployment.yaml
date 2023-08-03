@@ -25,6 +25,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       {{if .Values.serviceAccount.create}}
+      serviceAccount: {{ include "deployment.serviceAccountName" . }}
       serviceAccountName: {{ include "deployment.serviceAccountName" . }}
       {{- end }}
       securityContext:
