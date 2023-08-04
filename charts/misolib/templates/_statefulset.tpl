@@ -85,7 +85,18 @@ spec:
               port: {{ .Values.readinessProbe.port }}
           {{- end }}
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+            {{- if and .Values.resources.production (eq .Values.stage "production") }}
+            {{- toYaml .Values.resources.production | nindent 12 }}
+            {{- else if and .Values.resources.staging (eq .Values.stage "staging") }}
+            {{- toYaml .Values.resources.staging | nindent 12 }}
+            {{- else }}
+            limits:
+              cpu: 300m
+              memory: 500Mi
+            requests:
+              cpu: 200m
+              memory: 350Mi
+            {{- end}}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

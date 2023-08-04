@@ -7,6 +7,6 @@ appVersion: "1.0.0"
 dependencies:
   - name: misolib
     version: 0.1.8
-    repository: file://../../../charts/misolib
+    repository: https://raw.githubusercontent.com/getmiso/helm-charts/gh-pages
     import-values:
       - defaults
