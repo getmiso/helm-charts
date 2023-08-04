@@ -1,4 +1,13 @@
 fullnameOverride: example-deployment
+stage: staging
 image:
   repository: nginx
   tag: latest
+resources:
+  production:
+    limits:
+      cpu: "0.7"
+      memory: 900Mi
+    requests:
+      cpu: "0.5"
+      memory: 700Mi
