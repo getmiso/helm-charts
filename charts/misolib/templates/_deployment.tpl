@@ -84,11 +84,9 @@ spec:
             {{- toYaml .Values.resources.staging | nindent 12 }}
             {{- else }}
             limits:
-              cpu: 300m
-              memory: 500Mi
+              {{- toYaml .Values.resources.limits | nindent 14 }}
             requests:
-              cpu: 200m
-              memory: 350Mi
+              {{- toYaml .Values.resources.requests | nindent 14 }}
             {{- end}}
       {{- with .Values.nodeSelector }}
       nodeSelector:
