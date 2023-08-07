@@ -21,7 +21,7 @@ spec:
   {{ toYaml .Values.service.additionalPorts | indent 4 }}
   {{- end }}
   selector:
-    app: {{ include "misolib.fullname" . }}
+    {{- include "misolib.selectorLabels" . | nindent 4 }}
 {{- else }}
 {{- range $service := .Values.services }}
 apiVersion: v1
@@ -37,7 +37,7 @@ metadata:
 spec:
   type: {{ $service.type | default "NodePort" | quote }}
   selector:
-    app: {{ include "misolib.fullname" $ }}
+    {{- include "misolib.selectorLabels" $ | nindent 4 }}
   ports:
     {{- range $port := $service.ports }}
     - protocol: TCP

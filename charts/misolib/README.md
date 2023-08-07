@@ -43,6 +43,7 @@ The following tables lists the configurable parameters of the library and their 
 | `imagePullSecrets` | Image pull secrets list to use when pulling docker image | `[]` |
 | `podAnnotations` | Deployment pod annotations | `{}` |
 | `podSecurityContext` | Security context of deployment pods | `{}` |
+| `selectorLabels` | Pod selector labels used to link deployment pods with service | `NIL` |
 | `service.targetPort` | Target port of the service | `80` |
 | `service.additionalPorts` | Additional service ports list | `[]` |
 | `resources.limits.cpu` | CPU limit of the deployment | `200m` |

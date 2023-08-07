@@ -46,9 +46,11 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 Selector labels
 */}}
 {{- define "misolib.selectorLabels" -}}
+{{- if .Values.selectorLabels -}}
+{{- toYaml .Values.selectorLabels }}
+{{- else -}}
 app: {{ include "misolib.fullname" . }}
-app.kubernetes.io/name: {{ include "misolib.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
+{{- end }}
 {{- end }}
 
 {{/*
