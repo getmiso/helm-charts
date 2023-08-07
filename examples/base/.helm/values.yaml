@@ -25,3 +25,5 @@ serviceAccount:
   annotations: {"eks.amazonaws.com/role_arn": "ARN"}
 autoscaling:
   enabled: true
+selectorLabels:
+  name: name-of-theapp
