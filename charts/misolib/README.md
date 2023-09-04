@@ -64,6 +64,11 @@ The following tables lists the configurable parameters of the library and their 
 | `volumeMounts` | List of volume mounts to use in statefulsets | `[]` |
 | `volumeClaimTemplates` | List of volume claim templates to use in statefulsets | `[]` |
 | `services` | Additional services list. If this is not provided then following `service` value will take precedence. | `[]` |
+| `services[INDEX].name` | Name of the service. | `Null` |
+| `services[INDEX].ports` | List of ports for the first item(service) in the list | `[]` |
+| `services[INDEX].ports[INDEX].name` | Name of the port | `Null` |
+| `services[INDEX].ports[INDEX].port` | Port number | `Null` |
+| `services[INDEX].ports[INDEX].targetPort` | Target port number of the service's port | `Null` |
 | `service.annotations` | Annotations to add to service. | `{}` |
 | `service.type` | Service resource type: NodePort, ClusterIp | `NodePort` |
 | `service.port` | Port of the service | `80` |
