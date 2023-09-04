@@ -1,5 +1,5 @@
 apiVersion: v2
-name: example-deployment
+name: example-hpa
 description: An example application chart that uses librarychart
 type: application
 version: 0.1.0
