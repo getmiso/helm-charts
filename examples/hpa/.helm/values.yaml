@@ -1,0 +1,3 @@
+autoscaling:
+  targetCPUUtilizationPercentage: 49
+  targetMemoryUtilizationPercentage: null

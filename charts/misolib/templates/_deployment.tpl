@@ -78,16 +78,7 @@ spec:
               port: {{ .Values.readinessProbe.port }}
           {{- end }}
           resources:
-            {{- if and .Values.resources.production (eq .Values.stage "production") }}
-            {{- toYaml .Values.resources.production | nindent 12 }}
-            {{- else if and .Values.resources.staging (eq .Values.stage "staging") }}
-            {{- toYaml .Values.resources.staging | nindent 12 }}
-            {{- else }}
-            limits:
-              {{- toYaml .Values.resources.limits | nindent 14 }}
-            requests:
-              {{- toYaml .Values.resources.requests | nindent 14 }}
-            {{- end}}
+            {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
