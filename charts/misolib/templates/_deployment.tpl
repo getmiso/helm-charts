@@ -65,24 +65,17 @@ spec:
             - name: {{ $key }}
               value: {{ $val | quote }}
           {{- end }}
-          livenessProbe:
-          {{- if .Values.livenessProbe }}
-            {{ toYaml .Values.livenessProbe | nindent 12 }}
-          {{- else }}
-            exec:
-              command:
-                - uname
-            periodSeconds: 30
+          {{- with .Values.startupProbe }}
+          startupProbe:
+            {{ toYaml . | nindent 12 }}
           {{- end }}
+          {{- with .Values.readinessProbe }}
           readinessProbe:
-          {{- if .Values.readinessProbe  }}
-            {{ toYaml .Values.readinessProbe | nindent 12 }}
-          {{- else }}
-            exec:
-              command:
-                - uname
-            initialDelaySeconds: 5
-            periodSeconds: 30
+            {{ toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.livenessProbe }}
+          livenessProbe:
+            {{ toYaml . | nindent 12 }}
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
