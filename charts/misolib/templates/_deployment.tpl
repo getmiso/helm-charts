@@ -65,17 +65,24 @@ spec:
             - name: {{ $key }}
               value: {{ $val | quote }}
           {{- end }}
-          {{- if .Values.livenessProbe.enabled }}
           livenessProbe:
-            httpGet:
-              path: {{ .Values.livenessProbe.path }}
-              port: {{ .Values.livenessProbe.port }}
+          {{- if .Values.livenessProbe }}
+            {{ toYaml .Values.livenessProbe | nindent 12 }}
+          {{- else }}
+            exec:
+              command:
+                - uname
+            periodSeconds: 30
           {{- end }}
-          {{- if .Values.readinessProbe.enabled }}
           readinessProbe:
-            httpGet:
-              path: {{ .Values.readinessProbe.path }}
-              port: {{ .Values.readinessProbe.port }}
+          {{- if .Values.readinessProbe  }}
+            {{ toYaml .Values.readinessProbe | nindent 12 }}
+          {{- else }}
+            exec:
+              command:
+                - uname
+            initialDelaySeconds: 5
+            periodSeconds: 30
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
