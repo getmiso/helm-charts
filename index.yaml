@@ -3,7 +3,7 @@ entries:
   deployment:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.276385085Z"
+    created: "2024-11-12T08:05:37.951470703Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: 2ae168cbd477be5f5409e31c13a5a6d90c5bff5bf470f6459efd23778e764b62
@@ -14,7 +14,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.275838539Z"
+    created: "2024-11-12T08:05:37.951055609Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: cf952c3fcdf52c82b08092fe0d8fa24ccdf37d9435a268a9a17203f6c37dff6a
@@ -25,7 +25,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.27541237Z"
+    created: "2024-11-12T08:05:37.950667384Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: 12b3eff4638a69fea1aedda9ac0651d72e584e1f1d1ef9b2ba0b053bd1f7920a
@@ -36,7 +36,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.274984988Z"
+    created: "2024-11-12T08:05:37.950269482Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: c78ea323790410eb5fa733db7e0b4b454fc0efc5b35291cc58d4d28763c858a5
@@ -47,7 +47,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.274537047Z"
+    created: "2024-11-12T08:05:37.949825434Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: f42c68321a1fb3394b0eb4b20baa288104592754872d1fe2cd01a934f3607eca
@@ -58,7 +58,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.274105508Z"
+    created: "2024-11-12T08:05:37.949419948Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: 0bb1a2159fc531240b91d60b5105171acbe6be7ee91e3be1140f87dad0fa35eb
@@ -69,7 +69,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.273704275Z"
+    created: "2024-11-12T08:05:37.948988613Z"
     description: A Helm chart for Kubernetes Deployment. This should not be used with
       default values. Always custom value should be provided. Please follow README.
     digest: b2597204f0894758be786dfab9a35601d0ad3f57442009ac0a1de2242f0d9e07
@@ -80,10 +80,19 @@ entries:
     version: 0.1.0
   misolib:
   - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.278172168Z"
+    created: "2024-11-12T08:05:37.958946813Z"
     description: A library chart for deployment to Miso cluster.
-    digest: 1d9af433df553a87e4f5c06f583e444f76f2eebaca5cab2f52ee7294ab61c886
+    digest: c9def2b33af3e385adc84ad1ec800433009c5154ab6690e28df58466f85d1d10
+    name: misolib
+    type: library
+    urls:
+    - https://raw.githubusercontent.com/getmiso/helm-charts/gh-pages/misolib-2.2411.1.tgz
+    version: 2.2411.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-11-12T08:05:37.953767196Z"
+    description: A library chart for deployment to Miso cluster.
+    digest: 6f8dcc7f8513fc8e20a6c36dae14ce234106012a33e0b2553eb01845a5211015
     name: misolib
     type: library
     urls:
@@ -91,7 +100,7 @@ entries:
     version: 0.1.11
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.277740688Z"
+    created: "2024-11-12T08:05:37.953296858Z"
     description: A library chart for deployment to Miso cluster.
     digest: 3d424c8148b8740d5d7cece19bb93f8120548f8126d5a956b5dc88f2d058ae22
     name: misolib
@@ -101,7 +110,7 @@ entries:
     version: 0.1.10
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.28282138Z"
+    created: "2024-11-12T08:05:37.958519195Z"
     description: A library chart for deployment to Miso cluster.
     digest: 2ff0d42c61762863246ce20c5128a1fe2d0a604b4a0b010e58e69131ea1e9013
     name: misolib
@@ -111,7 +120,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.282344676Z"
+    created: "2024-11-12T08:05:37.958050301Z"
     description: A library chart for deployment to Miso cluster.
     digest: 3acb7f32715f4586b118dc27b8d1056dc8a4cac256506bc41f18dc97df848f48
     name: misolib
@@ -121,7 +130,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.281827706Z"
+    created: "2024-11-12T08:05:37.957589752Z"
     description: A library chart for deployment to Miso cluster.
     digest: d43b9d959ab8859fb12289239929f8a27ff313539a484d7c06b6c12f1fed1e55
     name: misolib
@@ -131,7 +140,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.281125492Z"
+    created: "2024-11-12T08:05:37.956927036Z"
     description: A library chart for deployment to Miso cluster.
     digest: b97d016597bddec341bdb127c4d5899d6c1bfb60b3c1424add408351fd73a38c
     name: misolib
@@ -141,7 +150,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.280143586Z"
+    created: "2024-11-12T08:05:37.955720318Z"
     description: A library chart for deployment to Miso cluster.
     digest: c96e614e7ea5e8c2dbac3cece1dbcd7389096d97368ff30203996c96306fe550
     name: misolib
@@ -151,7 +160,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.279717657Z"
+    created: "2024-11-12T08:05:37.955308881Z"
     description: A library chart for deployment to Miso cluster.
     digest: 50650ed432f14498be9b95c8b4602af7413a94c50313a1df594cf56bc4d3746e
     name: misolib
@@ -161,7 +170,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.27927118Z"
+    created: "2024-11-12T08:05:37.954862429Z"
     description: A library chart for deployment to Miso cluster.
     digest: 60ed03754eecae2b561da931d96fb1b01ebff91ee4eef985cd5d7bb8c891119e
     name: misolib
@@ -171,7 +180,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.278630137Z"
+    created: "2024-11-12T08:05:37.954210072Z"
     description: A library chart for deployment to Miso cluster.
     digest: 6ae347cb574ce92e3951c9f350f610877a4785783ac99c22d96b37cc21512e43
     name: misolib
@@ -181,7 +190,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.277308217Z"
+    created: "2024-11-12T08:05:37.952710134Z"
     description: A library chart for deployment to Miso cluster.
     digest: 63298a40c633933ca459426212b5722c00eaa2dba4f8af4e6841ea6f57f3840d
     name: misolib
@@ -191,7 +200,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-11-12T05:25:52.276848123Z"
+    created: "2024-11-12T08:05:37.951924469Z"
     description: A library chart for deployment to Miso cluster.
     digest: e1a17a9316be52bdd8b4cd263c4bd23e4911fbcaa67784ed02967648e2b470e1
     name: misolib
@@ -199,4 +208,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/getmiso/helm-charts/gh-pages/misolib-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-12T05:25:52.272922128Z"
+generated: "2024-11-12T08:05:37.948251395Z"
