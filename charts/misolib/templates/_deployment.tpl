@@ -67,15 +67,15 @@ spec:
           {{- end }}
           {{- with .Values.startupProbe }}
           startupProbe:
-            {{ toYaml . | nindent 12 }}
+            {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.readinessProbe }}
           readinessProbe:
-            {{ toYaml . | nindent 12 }}
+            {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.livenessProbe }}
           livenessProbe:
-            {{ toYaml . | nindent 12 }}
+            {{- toYaml . | nindent 12 }}
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
