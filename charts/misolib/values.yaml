@@ -23,14 +23,6 @@ exports:
       requests:
         cpu: 200m
         memory: 350Mi
-    livenessProbe:
-      enabled: false
-      path: /
-      port: 80
-    readinessProbe:
-      enabled: false
-      path: /
-      port: 80
     nodeSelector: {}
     tolerations: []
     affinity: {}
